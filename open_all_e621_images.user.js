@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        Open All e621/Gelbooru Images
+// @name        Open All Gallery Images
 // @namespace   http://userscripts.org/users/478287
 // @description Opens all the posts on a page in a new tab.
 // @include     http*://*e621.net/*
