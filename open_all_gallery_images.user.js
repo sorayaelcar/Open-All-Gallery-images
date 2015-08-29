@@ -3,9 +3,11 @@
 // @namespace   http://userscripts.org/users/478287
 // @description Opens all the posts on a page in a new tab.
 // @include     http*://*e621.net/*
+// @exclude     https://e621.net/post/show/*
 // @include     http*://*gelbooru.com/*
 // @exclude     http*://*gelbooru.com/index.php?page=post&s=view&id=*
 // @include     http://thedoujin.com/index.php/categories/*
+// @exclude     http://thedoujin.com/index.php/pages/*
 // @version     1.1.1
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @copyright   2012, Soraya Elcar (http://userscripts.org/users/soraya)
