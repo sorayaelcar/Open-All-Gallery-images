@@ -8,9 +8,11 @@
 // @exclude     http*://*gelbooru.com/index.php?page=post&s=view&id=*
 // @include     http://thedoujin.com/index.php/categories/*
 // @exclude     http://thedoujin.com/index.php/pages/*
-// @version     1.1.1
+// @include     http*://*rule34.xxx/*
+// @exclude     http*://*rule34.xxx/index.php?page=post&s=view&id=*
+// @version     1.2.1
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
-// @copyright   2012, Soraya Elcar (http://userscripts.org/users/soraya)
+// @copyright   2012-2015, Soraya Elcar (http://userscripts.org/users/soraya)
 // @grant       GM_openInTab
 // @grant       GM_registerMenuCommand
 // ==/UserScript==
@@ -107,3 +109,7 @@ window.addEventListener("load", function(e) {
     GM_registerMenuCommand("Open all in tabs!", open_all_in_tabs, 'a');
     inject_button();
 }, false);
+
+$(document).ready(function() {
+        inject_button();
+});
