@@ -12,9 +12,9 @@
 // @exclude     http*://*rule34.xxx/index.php?page=post&s=view&id=*
 // @include     https://inkbunny.net/submissionsviewall.php*
 // @exclude     https://inkbunny.net/submissionview.php*
-// @version     1.3.0
+// @version     1.2.1
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
-// @copyright   2012-2016, Soraya Elcar (http://userscripts.org/users/soraya)
+// @copyright   2012-2015, Soraya Elcar (http://userscripts.org/users/soraya)
 // @grant       GM_openInTab
 // @grant       GM_registerMenuCommand
 // ==/UserScript==
@@ -93,6 +93,7 @@ function inject_button() {
                    getElementByXpath('/html/body/div[1]/div'),
                    getElementByXpath('/html/body/center/div/div[5]/div[2]/div[4]'),
                    getElementByXpath('/html/body/div[5]/div[3]'),
+                   getElementByXpath('/html/body/div[6]/div[3]'),
                    ];
     console.log(targets);
     for (var index in targets) {
