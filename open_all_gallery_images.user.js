@@ -10,9 +10,11 @@
 // @exclude     http://thedoujin.com/index.php/pages/*
 // @include     http*://*rule34.xxx/*
 // @exclude     http*://*rule34.xxx/index.php?page=post&s=view&id=*
-// @version     1.2.1
+// @include     https://inkbunny.net/submissionsviewall.php*
+// @exclude     https://inkbunny.net/submissionview.php*
+// @version     1.3.0
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
-// @copyright   2012-2015, Soraya Elcar (http://userscripts.org/users/soraya)
+// @copyright   2012-2016, Soraya Elcar (http://userscripts.org/users/soraya)
 // @grant       GM_openInTab
 // @grant       GM_registerMenuCommand
 // ==/UserScript==
@@ -36,7 +38,7 @@ function getElementByXpath(path) {
 
 function get_all_posts() {
     // Gets all links to posts pages from the current page.
-    var regex = new RegExp(/\/post\/show\/\d+|page=post&s=view&id=\d+|\/pages\/\d+/),
+    var regex = new RegExp(/\/post\/show\/\d+|page=post&s=view&id=\d+|\/pages\/\d+|submissionview\.php/),
         links = [],
         all_links = document.getElementsByTagName("a"),
         link;
@@ -90,6 +92,7 @@ function inject_button() {
     var targets = [document.getElementById("navbar"), 
                    getElementByXpath('/html/body/div[1]/div'),
                    getElementByXpath('/html/body/center/div/div[5]/div[2]/div[4]'),
+                   getElementByXpath('/html/body/div[5]/div[3]'),
                    ];
     console.log(targets);
     for (var index in targets) {
