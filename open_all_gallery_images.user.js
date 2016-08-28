@@ -59,7 +59,7 @@ function open_all_in_tabs() {
     var all_links = get_all_posts().reverse();
 
     for (var i=0; i<all_links.length; i++) {
-        GM_openInTab(all_links[i]);
+        window.setTimeout(GM_openInTab, 500*i, all_links[i]);
     }
 
     // Set the button to green and let the user know we're done opening tabs.
