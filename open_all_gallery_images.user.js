@@ -12,7 +12,7 @@
 // @exclude     http*://*rule34.xxx/index.php?page=post&s=view&id=*
 // @include     https://inkbunny.net/submissionsviewall.php*
 // @exclude     https://inkbunny.net/submissionview.php*
-// @version     1.2.1
+// @version     1.2.2
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @copyright   2012-2015, Soraya Elcar (http://userscripts.org/users/soraya)
 // @grant       GM_openInTab
