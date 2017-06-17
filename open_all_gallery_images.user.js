@@ -4,15 +4,16 @@
 // @description Opens all the posts on a page in a new tab.
 // @include     http*://*e621.net/*
 // @exclude     https://e621.net/post/show/*
-// @include     http*://*gelbooru.com/*
-// @exclude     http*://*gelbooru.com/index.php?page=post&s=view&id=*
-// @include     http://thedoujin.com/index.php/categories/*
-// @exclude     http://thedoujin.com/index.php/pages/*
-// @include     http*://*rule34.xxx/*
-// @exclude     http*://*rule34.xxx/index.php?page=post&s=view&id=*
 // @include     https://inkbunny.net/submissionsviewall.php*
 // @exclude     https://inkbunny.net/submissionview.php*
-// @version     1.2.2
+// @include     http*://*booru.*/*
+// @exclude     http*://*booru.*/post/show/*
+// @exclude     http*://*booru.*/index.php?page=post&s=view&id=*
+// @include     http*://*rule34.xxx/*
+// @exclude     http*://*rule34.xxx/index.php?page=post&s=view&id=*
+// @include     http://thedoujin.com/index.php/categories/*
+// @exclude     http://thedoujin.com/index.php/pages/*
+// @version     1.2.3
 // @license     GPL version 3 or any later version; http://www.gnu.org/copyleft/gpl.html
 // @copyright   2012-2015, Soraya Elcar (http://userscripts.org/users/soraya)
 // @grant       GM_openInTab
@@ -94,6 +95,7 @@ function inject_button() {
                    getElementByXpath('/html/body/center/div/div[5]/div[2]/div[4]'),
                    getElementByXpath('/html/body/div[5]/div[3]'),
                    getElementByXpath('/html/body/div[6]/div[3]'),
+                   getElementByXpath('//*[@id="main-menu"]'),
                    ];
     console.log(targets);
     for (var index in targets) {
